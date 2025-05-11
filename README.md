@@ -1,36 +1,46 @@
 # 19CS301-Module2
 Exp.No:2(a)	ITERATIVE STATEMENTS- PRINTING N NATURAL NUMBERS
 ### AIM
-To create a python program for printing n natural numbers.
+To write a Python program to find the sum of the series:
+1 + X + X³ + X⁵ + ... + Xᴺ (where only odd powers of X including 1 are considered), based on the user input values for X and N.
+
 ### ALGORITHM
 
-Step 1:	 Begin the program.
+Step 1: Begin the program.
 
-Step 2:	 Use input() to read the value of n (the upper limit) from the user.
+Step 2: Take input values for X and N from the user.
 
-Step 3:	 Convert the input to an integer.
+Step 3: Initialize a variable sum to 0.
 
-Step 4:	 Display the message "Natural Numbers are :".
+Step 4: Use a for loop to iterate through powers from 1 to N (inclusive).
+   
+Step 5: Also include the initial term 1 in the sum.
 
-Step 5:	 Use a for loop to iterate from 1 to n (inclusive).
+Step 6: Display the result.
 
-Step 6:	 In each iteration, print the current value of i.
-
-Step 7:	 Terminate the program.
+Step 7: Terminate the program.
 
 ### PROGRAM
 ```
 n=int(input())
-print("Natural Numbers are :")
-for i in range(1,n+1,1):
-    print(i)
+x=int(input())
+sum=0
+i=1
+while(i<=n):
+    sum+=pow(x,i)
+    i+=2
+print("The sum of the series = ",sum)
 ```
 ### OUTPUT
-![image](https://github.com/user-attachments/assets/43ae22f0-fa7f-42b0-b99a-11d87aca3aed)
+![image](https://github.com/user-attachments/assets/09be28cd-827a-4b08-92d5-bfdc536d9492)
+
 
  
 ### RESULT
-Thus the python program for printing n natural numbers has been implemented and executed successfully.
+
+Thus, the Python program to find the sum of the series 1 + X + X³ + X⁵ + ... + Xᴺ has been implemented and executed successfully.
+
+
 
 Exp.No:2(b)	FUNCTIONS-PERFECT NUMBER
 
@@ -77,33 +87,37 @@ Thus the python program to check if a number is a perfect number or not has been
 Exp.No:2(c)	BUILT-IN FUNCTIONS AND LAMBDA FUNCTIONS- RELATING TWO NUMBERS
 
 ### AIM
-To write a python program to check the relation between them. That is if one number is greater or equal or lesser than another number using the lambda function.
+To write a Python program using a lambda function to check the relation between two numbers — whether one is greater, equal, or lesser than the other.
 ### ALGORITHM
 
-Step 1:	 Begin the program.
+Step 1: Begin the program.
 
-Step 2:	 Use eval() to get the two numbers (num1 and num2) from the user.
+Step 2: Use eval() to get two numbers (num1 and num2) as input from the user.
 
-Step 3:	 Define a lambda function res that takes two arguments x and y
+Step 3: Define a lambda function res that takes two arguments x and y.
 
-Step 4:	 The lambda function compares the numbers and prints which one is smaller: If x > y, it prints num2 is smaller than num1. Otherwise, it prints num1 is smaller than num2.
+Step 4: The lambda function compares the numbers and prints the relationship:
+  
+Step 5: Call the lambda function by passing num1 and num2 as arguments.
 
-Step 5:	 Call the res Function: Pass num1 and num2 to the lambda function to perform the comparison.
+Step 6: Terminate the program.
 
-Step 6:	 Terminate the program.
+
 ### PROGRAM
 ```num1=eval(input())
-num2=eval(input())
-max=lambda x,y: print(f"{num2} is smaller than {num1}") if x>y else print(f"{num1} is smaller than {num2}")![image](https://github.com/user-attachments/assets/4a3ccdb3-e831-41b8-b783-4f58c664521e)
-
-max(num1,num2)
+f=lambda a,b:print(a+b)
+a=int(input())
+b=int(input())
+f(a,b)
 ```
 ### OUTPUT
-![image](https://github.com/user-attachments/assets/d6767aa8-b158-4f19-83f6-af03322a5b9d)
+![image](https://github.com/user-attachments/assets/df39b424-4290-4d0a-8500-95926e94d627)
 
 
 ### RESULT
-Thus the python program to check a relationship between two numbers has been implemented and executed successfully.
+Thus, the Python program using a lambda function to compare two numbers has been implemented and executed successfully.
+
+
 
 
 Exp.No:2(d)	LOOPING PATTERNS- PRINTING PATTERN
